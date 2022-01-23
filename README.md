@@ -2,11 +2,7 @@
 
 ## Overview: 
 
-The purpose of this analysis is to use Panda and Jupyter Notebook to analyze student funding and students' standardized test score. According to Maria, we'll also need to replace the math and reading scores of 9th graders at Thomas high School with NaNs, then repeat the school district analysis.
-
-For student data, We will first clean student names that make sure the student dataset contains no prefixes(such as Dr, Mr, Ms, etc) and suffixes(such as MD, Ph.D., DDC, etc). Then we start filtering out a list of 9th graders in Thomas High School and replace both math and reading score as NaNs.
-
-Secondly, we will merge both student data and school data into one data frame so that we can repeat the school district analysis. When asking the system to calculate all the count, average, and percentage, the number of 9th graders in Thomas High School will be subtracted from the total amount. We will only be using the student who has the score.
+- The purpose of this analysis is to use Panda and Jupyter Notebook to analyze student funding and students' standardized test score. According to Maria, we'll also need to replace the math and reading scores of 9th graders at Thomas high School with NaNs, then repeat the school district analysis. For student data, We will first clean student names that make sure the student dataset contains no prefixes(such as Dr, Mr, Ms, etc) and suffixes(such as MD, Ph.D., DDC, etc). Then we start filtering out a list of 9th graders in Thomas High School and replace both math and reading score as NaNs. Secondly, we will merge both student data and school data into one data frame so that we can repeat the school district analysis. When asking the system to calculate all the count, average, and percentage, the number of 9th graders in Thomas High School will be subtracted from the total amount. We will only be using the student who has the score.
 
 
 ## Resource
@@ -21,40 +17,68 @@ Using bulleted lists and images of DataFrames as support, address the following 
 
 - District summary was effected that average and % on math score was decreased, and lead overall passing % was decreased.
 
-    Orginal district summary: 
-        Average Math score is 79.0
-        Average Reading score is 81.9
-        % Passing Math is 75%
-        % Passing Reading is 85.8%
-        % Overall Passing is 65.2%
+   - Orginal district summary: 
+        - Average Math score is 79.0
+        - Average Reading score is 81.9
+        - % Passing Math is 75%
+        - % Passing Reading is 85.8%
+        - % Overall Passing is 65.2%
+        ![](https://github.com/helen3121433/School_District_Analysis/blob/main/Image/Original_district_summary.PNG)
     
-    New district summary (Thomas High school 9th grader score in NaN):
-        Average Math score is 78.9
-        Average Reading score is 81.9
-        % Passing Math is 74.8%
-        % Passing Reading is 85.7%
-        % Overall Passing is 64.9%
+   - New district summary (Thomas High school 9th grader score in NaN):
+       -  Average Math score is 78.9
+       -  Average Reading score is 81.9
+       -  % Passing Math is 74.8%
+       -  % Passing Reading is 85.7%
+       -  % Overall Passing is 64.9%
+        ![](https://github.com/helen3121433/School_District_Analysis/blob/main/Image/New_District_summary.PNG)
 
-- How is the school summary affected?
+- School Summary: On data frame, average, percentage and overall passing test score per Thomas High School was slight decreased
+    
+    Orginal School Summary: 
+    ![](https://github.com/helen3121433/School_District_Analysis/blob/main/Image/Original_school_summary.PNG)
+    
+    New School Summary:
+    ![](https://github.com/helen3121433/School_District_Analysis/blob/main/Image/New_School_Summary.PNG)
 
 
-- How does replacing the ninth graders’ math and reading 
-scores affect Thomas High School’s performance relative to the other schools?
-    As mentioned above, if we analyze a report of the total average and percentage passing rate of all 15 school, there's a slight decrease in the total average of math score, and % of passing math rate. However, does not affect the ranking of performing school, Thomas High school still in the second place of top five performing school. 
+- Thomas High School’s performance relative to the other schools.
+
+   - As mentioned above, if we analyze a report of the total average and percentage passing rate of all 15 school, there's a slight decrease in the total average of math score, and % of passing math rate. However, does not affect the ranking of performing school, Thomas High school still in the second place of top five performing school. 
 
 - How does replacing the ninth-grade scores affect the following:
-    Math and reading scores by grade:
+   - Math and reading scores by grade:
         When we run the analysis, it will shows "nan" 9th math and 9th reading score on Thomas High School row. 
+        ![](https://github.com/helen3121433/School_District_Analysis/blob/main/Image/NaN_Thomas.PNG)
 
-    Scores by school spending
+   - Scores by school spending
         There is not much effect on school spending, even though we're not counting the math and reading scores of all 9th graders in Thomas high school. As the district summary shows above, the overall score was only dropped by 0.3%, so there was not a big change in overall school spending. 
+        
+        Original School spending summary:
+        ![](https://github.com/helen3121433/School_District_Analysis/blob/main/Image/original_school_spending.PNG)
+        
+        New School spending Summary:
+        ![](https://github.com/helen3121433/School_District_Analysis/blob/main/Image/new_school_spending.PNG)
 
-    Scores by school size
+   - Scores by school size
         We have a tiny effect when comparing school size vs test scores. The score was decreased on Median school size. But if we round up the result to zero or one decimal, we can't see the difference. We only replace the score of the 9th grader as NaN value but did not replace all names and IDs as NaN.
+        
+        Original School size summary:
+        ![](https://github.com/helen3121433/School_District_Analysis/blob/main/Image/original_school_size.PNG)
+        
+        New School size summary:
+        ![](https://github.com/helen3121433/School_District_Analysis/blob/main/Image/New_school_size.PNG)
 
-    Scores by school type
+
+   - Scores by school type
         We have a tiny effect on school type compared with test scores as well. Thomas High School was a Charter school type, so the average and % of test score was decreased. Again, if we round up the result to zero or one decimal place, we can't see the difference. 
+        
+        Original School Type summary:
+        ![](https://github.com/helen3121433/School_District_Analysis/blob/main/Image/orginal_school_type.PNG)
+        
+        New School Type Summary:
+        ![](https://github.com/helen3121433/School_District_Analysis/blob/main/Image/New_School_Type.PNG)
 
 ## Summary
 
-Overall, there was not much change in the updated school district analysis. The average test score was decreased, the % of test scores was decreased, and this caused the overall % score was decreased. If compared school spending per student vs test score, the test score calculations on spending range at $630-644 was changed. If compared school size vs test score, test score calculations on Median range school was decreased. If compared school type vs test score, calculations on row Charter school type was decreased.
+- Overall, there was not much change in the updated school district analysis. The average test score was decreased, the % of test scores was decreased, and this caused the overall % score was decreased. If compared school spending per student vs test score, the test score calculations on spending range at $630-644 was changed. If compared school size vs test score, test score calculations on Median range school was decreased. If compared school type vs test score, calculations on row Charter school type was decreased.
